@@ -12,3 +12,5 @@ Portfolio website for a social media & content creation duo. Built with React + 
 ## Deploy
 
 Deployed on [Vercel](https://vercel.com).
+
+<img width="1912" height="991" alt="image" src="https://github.com/user-attachments/assets/ae76d5d4-b20a-420c-b5a7-fc31070c077f" />
