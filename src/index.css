@@ -634,6 +634,34 @@ h2 {
 	padding: 12px 0;
 }
 
+.person-links {
+	display: flex;
+	gap: 10px;
+	margin-top: 20px;
+	flex-wrap: wrap;
+}
+
+.person-link {
+	display: inline-block;
+	padding: 8px 18px;
+	border: 2px solid var(--espresso);
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--espresso);
+	text-decoration: none;
+	transition:
+		background 0.18s,
+		color 0.18s;
+}
+
+.person-link:hover {
+	background: var(--espresso);
+	color: var(--butter);
+}
+
 .contact-box {
 	background: var(--espresso);
 	color: var(--butter);
