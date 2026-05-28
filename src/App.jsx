@@ -7,7 +7,6 @@ import Marquee from './components/Marquee'
 import People from './components/People'
 import Services from './components/Services'
 import Tools from './components/Tools'
-import Work from './components/Work'
 
 function App() {
 	return (
@@ -19,7 +18,7 @@ function App() {
 				<About />
 				<Services />
 				<Tools />
-				<Work />
+				{/* <Work /> */}
 				<People />
 				<Contact />
 			</main>

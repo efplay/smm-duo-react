@@ -1,5 +1,6 @@
 const people = [
 	{
+		photo: '/sasha.jpg',
 		initials: 'OT',
 		name: 'Oleksandra Trush',
 		role: 'Social Media & Content Specialist focused on visual communication, storytelling and short-form video content.',
@@ -10,6 +11,7 @@ const people = [
 		],
 	},
 	{
+		photo: '/nastya.jpg',
 		initials: 'AS',
 		name: 'Anastasiia Savytska',
 		role: 'Digital content creator focused on strategy, branding, startup communication and modern content workflows.',
@@ -33,7 +35,9 @@ export default function People() {
 				<div className='people-grid'>
 					{people.map(person => (
 						<div className='person' key={person.initials}>
-							<div className='person-photo'>{person.initials}</div>
+							<div className='person-photo'>
+								<img src={person.photo} alt={person.name} />
+							</div>
 							<div className='person-body'>
 								<h3>{person.name}</h3>
 								<p className='muted'>{person.role}</p>

@@ -12,9 +12,9 @@ export default function Hero() {
 						and short-form videos for brands, startups and creative projects.
 					</p>
 					<div className='buttons'>
-						<a className='btn primary' href='#work'>
+						{/* <a className='btn primary' href='#work'>
 							View work
-						</a>
+						</a> */}
 						<a className='btn' href='#contact'>
 							Contact us
 						</a>

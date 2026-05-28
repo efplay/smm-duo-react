@@ -16,6 +16,8 @@
 
 html {
 	scroll-behavior: smooth;
+	background: var(--espresso);
+	overscroll-behavior: none;
 }
 
 body {
@@ -24,6 +26,7 @@ body {
 	color: var(--text);
 	line-height: 1.45;
 	overflow-x: hidden;
+	overscroll-behavior: none;
 }
 
 a {
@@ -503,25 +506,35 @@ h2 {
 .people-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 22px;
+	gap: 18px;
+	max-width: 780px;
+	margin: 0 auto;
 }
 
 .person {
 	border: 2px solid var(--espresso);
-	border-radius: 46px;
+	border-radius: 32px;
 	background: var(--cream);
 	overflow: hidden;
 }
 
 .person-photo {
-	min-height: 220px;
+	height: 520px;
 	background: var(--espresso);
-	color: var(--butter);
-	display: grid;
-	place-items: center;
-	font-size: clamp(4rem, 10vw, 8rem);
-	font-weight: 950;
-	letter-spacing: -0.04em;
+	overflow: hidden;
+}
+
+.person-photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+	display: block;
+	transition: transform 0.5s ease;
+}
+
+.person:hover .person-photo img {
+	transform: scale(1.04);
 }
 
 .person-body {
@@ -529,12 +542,12 @@ h2 {
 }
 
 .person h3 {
-	font-size: clamp(2.1rem, 4vw, 4.4rem);
-	line-height: 0.85;
-	letter-spacing: -0.08em;
+	font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+	line-height: 0.9;
+	letter-spacing: -0.03em;
 	text-transform: uppercase;
 	font-weight: 950;
-	margin-bottom: 20px;
+	margin-bottom: 14px;
 }
 
 .person ul {
