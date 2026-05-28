@@ -39,6 +39,60 @@ a {
 	margin: 0 auto;
 }
 
+/* ── Top Header ──────────────────────────────────────────── */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	padding: 22px 0;
+	color: var(--butter);
+	background: var(--espresso);
+	transition:
+		opacity 0.3s ease,
+		transform 0.3s ease;
+}
+
+header.header-hidden {
+	opacity: 0;
+	transform: translateY(-100%);
+	pointer-events: none;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	font-weight: 800;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.logo-mark {
+	width: 38px;
+	height: 38px;
+	border: 2px solid var(--butter);
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	font-size: 13px;
+	font-weight: 900;
+}
+
+.nav-links {
+	display: flex;
+	gap: 28px;
+	align-items: center;
+}
+
 /* ── FAB Navigation ──────────────────────────────────────── */
 .fab-nav {
 	position: fixed;
@@ -49,6 +103,14 @@ a {
 	flex-direction: column;
 	align-items: flex-end;
 	gap: 10px;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.fab-nav.fab-nav--visible {
+	pointer-events: auto;
+	opacity: 1;
 }
 
 .fab-overlay {
@@ -131,7 +193,7 @@ a {
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
-	padding: 70px 0 70px;
+	padding: 110px 0 70px;
 	position: relative;
 	background: var(--espresso);
 	color: var(--butter);
