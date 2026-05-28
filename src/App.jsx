@@ -5,7 +5,6 @@ import About from './components/About';
 import Services from './components/Services';
 import Tools from './components/Tools';
 import Work from './components/Work';
-import Experience from './components/Experience';
 import People from './components/People';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -21,7 +20,6 @@ function App() {
         <Services />
         <Tools />
         <Work />
-        <Experience />
         <People />
         <Contact />
       </main>

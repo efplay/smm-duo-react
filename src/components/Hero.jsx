@@ -31,11 +31,13 @@ export default function Hero() {
 						<span>2026</span>
 					</div>
 					<div>
-						<div className='big-number'>02</div>
+						<div className='big-number'>2</div>
 						<div className='panel-title'>
 							Creators.
 							<br />
-							One visual voice.
+							One visual
+							<br />
+							voice.
 						</div>
 						<p className='panel-text'>
 							Strategy, content ideas, design, video editing and creative

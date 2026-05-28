@@ -1,7 +1,7 @@
 const about = {
   eyebrow: 'About us',
   heading: 'Creative duo for modern brands',
-  text: 'We are two junior digital specialists focused on social media management, content creation, visual design and short-form video editing. Our work combines storytelling, trend awareness and clear communication.',
+  text: 'We are two digital specialists focused on social media management, content creation, visual design and short-form video production — from quick reels to longer formats. Our work combines storytelling, trend awareness and clear communication.',
 };
 
 export default function About() {
