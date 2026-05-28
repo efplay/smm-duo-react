@@ -1,32 +1,43 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+
+const NAV_ITEMS = [
+	{ label: 'About', href: '#about' },
+	{ label: 'Services', href: '#services' },
+	{ label: 'Tools', href: '#tools' },
+	{ label: 'People', href: '#people' },
+	{ label: 'Contact', href: '#contact' },
+]
 
 export default function Header() {
-	const [scrolled, setScrolled] = useState(false)
+	const [open, setOpen] = useState(false)
 
-	useEffect(() => {
-		const onScroll = () => setScrolled(window.scrollY > 40)
-		window.addEventListener('scroll', onScroll, { passive: true })
-		return () => window.removeEventListener('scroll', onScroll)
-	}, [])
+	const handleNav = href => {
+		setOpen(false)
+		const el = document.querySelector(href)
+		if (el) el.scrollIntoView({ behavior: 'smooth' })
+	}
 
 	return (
-		<header className={scrolled ? 'scrolled' : ''}>
-			<div className='container'>
-				<nav>
-					<a href='#' className='logo'>
-						<span className='logo-mark'>DD</span>
-						<span>Digital Duo</span>
-					</a>
-					<div className='nav-links'>
-						<a href='#services'>Services</a>
-						<a href='#work'>Work</a>
-						<a href='#about'>About</a>
-						<a href='#contact' className='menu-pill'>
-							Contact
-						</a>
-					</div>
-				</nav>
+		<div className='fab-nav'>
+			{open && <div className='fab-overlay' onClick={() => setOpen(false)} />}
+			<div className={`fab-menu${open ? ' fab-menu--open' : ''}`}>
+				{NAV_ITEMS.map(item => (
+					<button
+						key={item.href}
+						className='fab-menu-item'
+						onClick={() => handleNav(item.href)}
+					>
+						{item.label}
+					</button>
+				))}
 			</div>
-		</header>
+			<button
+				className={`fab-btn${open ? ' fab-btn--open' : ''}`}
+				onClick={() => setOpen(v => !v)}
+				aria-label='Navigation menu'
+			>
+				DD
+			</button>
+		</div>
 	)
 }
