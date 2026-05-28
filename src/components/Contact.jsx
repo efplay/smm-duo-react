@@ -51,44 +51,6 @@ export default function Contact() {
 							Email us
 						</button>
 					</div>
-
-					<div className='contact-people'>
-						<div className='contact-person'>
-							<span className='contact-person-name'>Nastya</span>
-							<div className='buttons'>
-								<a
-									className='btn'
-									href='https://instagram.com/sss.tasyaa/'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									Instagram
-								</a>
-								<a
-									className='btn'
-									href='https://linkedin.com/in/anastasiia-savytska-54b79135b'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									LinkedIn
-								</a>
-							</div>
-						</div>
-
-						<div className='contact-person'>
-							<span className='contact-person-name'>Sasha</span>
-							<div className='buttons'>
-								<a
-									className='btn'
-									href='https://www.linkedin.com/in/oleksandra-trush-06058b403/'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									LinkedIn
-								</a>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 

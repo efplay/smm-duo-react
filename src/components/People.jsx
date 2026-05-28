@@ -2,7 +2,7 @@ const people = [
 	{
 		photo: '/sasha.jpg',
 		initials: 'OT',
-		firstName: 'Oleksandra',
+		firstName: 'Oleksandra Trush',
 		name: 'Oleksandra Trush',
 		role: 'Social Media & Content Specialist focused on visual communication, storytelling and short-form video content.',
 		details: [
@@ -24,7 +24,7 @@ const people = [
 	{
 		photo: '/nastya.jpg',
 		initials: 'AS',
-		firstName: 'Anastasiia',
+		firstName: 'Anastasiia Savytska',
 		name: 'Anastasiia Savytska',
 		role: 'Digital content creator focused on strategy, branding, startup communication and modern content workflows.',
 		details: [
